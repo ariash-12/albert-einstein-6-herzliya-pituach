@@ -176,6 +176,16 @@
   .loc p{max-width:620px;margin:0 auto;color:#ece4d4;font-size:1.08rem}
   .loc .divider span{background:rgba(205,171,107,.5)}
 
+  /* ---------- film ---------- */
+  .film{background:var(--ink);color:var(--ivory);padding:120px 0;text-align:center}
+  .film .divider span{background:rgba(205,171,107,.4)}
+  .film h2{font-size:clamp(2rem,4.4vw,3rem);color:#fff;margin:22px 0 12px}
+  .film .sub{color:#b6ab98;font-size:.95rem;margin-bottom:46px;letter-spacing:.02em}
+  .film .frame{position:relative;max-width:880px;margin:0 auto;padding:10px;background:linear-gradient(135deg,rgba(205,171,107,.5),rgba(205,171,107,.12));border-radius:3px}
+  .film video{width:100%;display:block;border-radius:2px;background:#000}
+  .film .dl{display:inline-block;margin-top:22px;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-lt);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:3px}
+  .film .dl:hover{color:#fff}
+
   /* ---------- gallery ---------- */
   .gallery{padding:120px 0 40px;background:var(--paper);text-align:center}
   .gallery h2{font-size:clamp(2rem,4vw,3rem);margin:18px 0 50px}
@@ -372,6 +382,22 @@
     <div class="divider"><span></span><i></i><span></span></div>
     <h2>Life on the Riviera</h2>
     <p>A pedestrianised, mosaic-paved promenade winds between low-rise residences and Mediterranean gardens &mdash; a gated world steps from the sea, a synagogue and a private medical centre.</p>
+  </div>
+</section>
+
+<!-- FILM -->
+<section class="film">
+  <div class="wrap reveal">
+    <div class="divider"><span></span><i></i><span></span></div>
+    <h2>A Walk Through the Residence</h2>
+    <p class="sub">Press play for a moving tour of the villa</p>
+    <div class="frame">
+      <video controls preload="metadata" playsinline poster="assets/photo-15.jpg">
+        <source src="assets/tour.mp4" type="video/mp4" />
+        Your browser cannot play this video.
+      </video>
+    </div>
+    <a class="dl" href="assets/tour.mp4" target="_blank">Open video in new tab &rarr;</a>
   </div>
 </section>
 
