@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Albert Einstein 6 · A Classic Villa Residence on the Herzliya Riviera</title>
+<meta name="description" content="A rare 470 sqm classic villa apartment in Herzliya Pituach — second line to the sea, private pool, kosher Wolf kitchen, and a gated Mediterranean residence. Offered at $8,600,000." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#16130f;
+    --ink-soft:#26211a;
+    --ivory:#f5efe4;
+    --paper:#faf6ee;
+    --gold:#b3924f;
+    --gold-lt:#cdab6b;
+    --line:rgba(179,146,79,.35);
+    --muted:#8c8071;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Jost',sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    font-weight:300;
+    line-height:1.7;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.12}
+  .eyebrow{
+    font-family:'Jost',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:.42em;
+    font-size:.7rem;
+    font-weight:400;
+    color:var(--gold);
+  }
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+
+  /* ---------- top bar ---------- */
+  .topbar{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:20px 38px;
+    transition:background .5s var(--ease),padding .5s var(--ease),box-shadow .5s var(--ease);
+    color:var(--ivory);
+  }
+  .topbar.scrolled{
+    background:rgba(22,19,15,.92);
+    backdrop-filter:blur(8px);
+    padding:14px 38px;
+    box-shadow:0 1px 0 rgba(205,171,107,.18);
+  }
+  .topbar .brandmark{font-family:'Cormorant Garamond',serif;font-size:1.35rem;letter-spacing:.06em}
+  .topbar .brandmark small{display:block;font-family:'Jost',sans-serif;font-size:.58rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gold-lt);margin-top:2px}
+  .topbar .nav-cta{
+    font-family:'Jost',sans-serif;text-transform:uppercase;letter-spacing:.28em;font-size:.68rem;
+    color:var(--ivory);text-decoration:none;border:1px solid rgba(205,171,107,.55);
+    padding:11px 22px;border-radius:2px;transition:all .4s var(--ease);
+  }
+  .topbar .nav-cta:hover{background:var(--gold);border-color:var(--gold);color:#fff}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;height:100vh;min-height:620px;
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    color:var(--ivory);overflow:hidden;
+  }
+  .hero .bg{
+    position:absolute;inset:0;
+    background:url('assets/photo-15.jpg') center 38%/cover no-repeat;
+    transform:scale(1.12);
+    animation:kenburns 22s ease-out forwards;
+  }
+  @keyframes kenburns{to{transform:scale(1)}}
+  .hero::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(22,19,15,.55) 0%,rgba(22,19,15,.18) 35%,rgba(22,19,15,.55) 100%);
+  }
+  .hero-inner{position:relative;z-index:2;padding:0 24px;max-width:880px}
+  .hero .eyebrow{color:var(--gold-lt)}
+  .hero h1{
+    font-size:clamp(3.2rem,8vw,6.4rem);
+    margin:.28em 0 .14em;font-weight:500;letter-spacing:.01em;
+    text-shadow:0 2px 30px rgba(0,0,0,.35);
+  }
+  .hero .sub{font-size:clamp(1.05rem,2vw,1.3rem);font-weight:300;letter-spacing:.04em;opacity:.94}
+  .hero .price{
+    margin-top:30px;display:inline-flex;flex-direction:column;align-items:center;gap:3px;
+  }
+  .hero .price .amt{font-family:'Cormorant Garamond',serif;font-size:2.1rem;letter-spacing:.04em;color:#fff}
+  .hero .price .shk{font-size:.78rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-lt)}
+  .scrollcue{
+    position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:3;
+    width:1px;height:54px;background:linear-gradient(var(--gold-lt),transparent);
+  }
+  .scrollcue::before{
+    content:"";position:absolute;top:0;left:-1px;width:3px;height:14px;background:var(--gold-lt);
+    animation:drop 2.2s var(--ease) infinite;
+  }
+  @keyframes drop{0%{top:-4px;opacity:0}30%{opacity:1}100%{top:54px;opacity:0}}
+
+  /* reveal animation */
+  .reveal{opacity:0;transform:translateY(34px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal.d1{transition-delay:.12s}.reveal.d2{transition-delay:.24s}.reveal.d3{transition-delay:.36s}
+
+  .divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:0 auto}
+  .divider span{height:1px;width:64px;background:var(--line)}
+  .divider i{width:6px;height:6px;border:1px solid var(--gold);transform:rotate(45deg);display:block}
+
+  /* ---------- intro ---------- */
+  .intro{background:var(--ink);color:var(--ivory);padding:120px 0;text-align:center}
+  .intro .divider span{background:rgba(205,171,107,.4)}
+  .intro p{
+    font-family:'Cormorant Garamond',serif;font-weight:400;font-style:italic;
+    font-size:clamp(1.6rem,3.4vw,2.5rem);line-height:1.4;max-width:880px;margin:30px auto 0;color:#efe7d6;
+  }
+  .intro .by{margin-top:26px;font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-lt)}
+
+  /* ---------- stats ---------- */
+  .stats{background:var(--ivory);padding:84px 0}
+  .stats .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+  .stat .num{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,5vw,3.6rem);color:var(--ink);line-height:1}
+  .stat .num small{font-size:1.3rem;color:var(--gold)}
+  .stat .lbl{font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+  .stat{position:relative;padding:14px 8px}
+  .stat:not(:last-child)::after{content:"";position:absolute;right:-10px;top:18%;height:64%;width:1px;background:var(--line)}
+
+  /* ---------- narrative ---------- */
+  .narr{padding:120px 0;background:var(--paper)}
+  .narr .row{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+  .narr h2{font-size:clamp(2.2rem,4.4vw,3.4rem);margin:18px 0 24px}
+  .narr p{margin-bottom:18px;color:#4a4338;max-width:30em}
+  .narr .imgwrap{position:relative}
+  .narr .imgwrap img{width:100%;height:560px;object-fit:cover;border-radius:2px;display:block}
+  .narr .imgwrap::after{content:"";position:absolute;inset:16px;border:1px solid rgba(255,255,255,.5);pointer-events:none}
+  .narr .imgwrap .tag{
+    position:absolute;left:-22px;bottom:40px;background:var(--gold);color:#fff;
+    padding:14px 26px;font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;
+  }
+
+  /* ---------- features ---------- */
+  .features{background:var(--ink);color:var(--ivory);padding:120px 0;text-align:center}
+  .features .divider span{background:rgba(205,171,107,.4)}
+  .features h2{font-size:clamp(2.2rem,4.4vw,3.2rem);margin:22px 0 60px;color:#fff}
+  .fgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(205,171,107,.16);border:1px solid rgba(205,171,107,.16)}
+  .feat{background:var(--ink);padding:40px 26px;text-align:center;transition:background .5s var(--ease)}
+  .feat:hover{background:var(--ink-soft)}
+  .feat .ic{font-family:'Cormorant Garamond',serif;font-size:1.9rem;color:var(--gold-lt);display:block;margin-bottom:14px}
+  .feat h3{font-size:1.32rem;color:#fff;font-weight:500;margin-bottom:6px}
+  .feat p{font-size:.82rem;color:#b6ab98;font-weight:300}
+
+  /* ---------- showcase alternating ---------- */
+  .showcase{padding:0;background:var(--paper)}
+  .scene{display:grid;grid-template-columns:1fr 1fr;min-height:560px}
+  .scene .pic{background-size:cover;background-position:center}
+  .scene .txt{display:flex;flex-direction:column;justify-content:center;padding:80px clamp(40px,6vw,96px)}
+  .scene.alt .txt{order:-1}
+  .scene .txt h3{font-size:clamp(1.9rem,3.6vw,2.7rem);margin:14px 0 18px}
+  .scene .txt p{color:#4a4338;max-width:30em}
+  .scene:nth-child(even){background:var(--ivory)}
+
+  /* ---------- location band ---------- */
+  .loc{
+    position:relative;padding:160px 0;text-align:center;color:var(--ivory);
+    background:url('assets/photo-13.jpg') center 60%/cover fixed no-repeat;
+  }
+  .loc::after{content:"";position:absolute;inset:0;background:rgba(22,19,15,.58)}
+  .loc .wrap{position:relative;z-index:2}
+  .loc h2{font-size:clamp(2.2rem,5vw,3.6rem);color:#fff;margin:20px 0 18px}
+  .loc p{max-width:620px;margin:0 auto;color:#ece4d4;font-size:1.08rem}
+  .loc .divider span{background:rgba(205,171,107,.5)}
+
+  /* ---------- gallery ---------- */
+  .gallery{padding:120px 0 40px;background:var(--paper);text-align:center}
+  .gallery h2{font-size:clamp(2rem,4vw,3rem);margin:18px 0 50px}
+  .gmason{columns:3;column-gap:16px;text-align:left}
+  .gmason a{display:block;margin:0 0 16px;overflow:hidden;border-radius:2px;position:relative}
+  .gmason img{width:100%;display:block;transition:transform 1.1s var(--ease),filter .6s var(--ease);filter:saturate(.95)}
+  .gmason a:hover img{transform:scale(1.07);filter:saturate(1.08)}
+
+  /* ---------- CTA ---------- */
+  .cta{background:var(--ink);color:var(--ivory);padding:130px 0;text-align:center}
+  .cta .eyebrow{color:var(--gold-lt)}
+  .cta h2{font-size:clamp(2.4rem,5vw,3.6rem);color:#fff;margin:18px 0 14px}
+  .cta .lead{max-width:560px;margin:0 auto 14px;color:#c8bda9}
+  .cta .price-big{font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--gold-lt);margin:6px 0 38px}
+  .cta .price-big small{display:block;font-family:'Jost',sans-serif;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:#9d927f;margin-top:6px}
+  .btns{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+  .btn{
+    text-decoration:none;font-family:'Jost',sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:.74rem;
+    padding:18px 36px;border-radius:2px;transition:all .4s var(--ease);display:inline-flex;align-items:center;gap:10px;
+  }
+  .btn-wa{background:#1faf54;color:#fff}
+  .btn-wa:hover{background:#179447;transform:translateY(-2px)}
+  .btn-line{border:1px solid rgba(205,171,107,.55);color:var(--ivory)}
+  .btn-line:hover{background:var(--gold);border-color:var(--gold);color:#fff}
+  .agent{margin-top:54px;display:flex;flex-direction:column;align-items:center;gap:4px}
+  .agent .nm{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:#fff}
+  .agent .ro{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-lt)}
+
+  /* ---------- footer ---------- */
+  footer{background:#0f0d0a;color:#7c7264;padding:46px 0;text-align:center;font-size:.78rem}
+  footer .fbrand{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold-lt);letter-spacing:.08em;margin-bottom:10px}
+  footer .disc{max-width:680px;margin:14px auto 0;font-size:.68rem;line-height:1.7;color:#5c5448}
+
+  /* ---------- floating WhatsApp ---------- */
+  .wa-float{
+    position:fixed;right:26px;bottom:26px;z-index:60;
+    width:60px;height:60px;border-radius:50%;background:#1faf54;color:#fff;
+    display:flex;align-items:center;justify-content:center;text-decoration:none;
+    box-shadow:0 10px 30px rgba(31,175,84,.45);transition:transform .35s var(--ease);
+  }
+  .wa-float svg{width:30px;height:30px;fill:#fff}
+  .wa-float::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #1faf54;animation:pulse 2.4s ease-out infinite}
+  .wa-float:hover{transform:scale(1.08)}
+  @keyframes pulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.8);opacity:0}}
+
+  @media(max-width:900px){
+    .stats .grid{grid-template-columns:repeat(2,1fr);gap:34px}
+    .stat:not(:last-child)::after{display:none}
+    .narr .row{grid-template-columns:1fr;gap:34px}
+    .narr .imgwrap img{height:420px}
+    .fgrid{grid-template-columns:repeat(2,1fr)}
+    .scene{grid-template-columns:1fr}
+    .scene .pic{min-height:340px}
+    .scene.alt .txt{order:0}
+    .gmason{columns:2}
+    .topbar{padding:16px 22px}
+    .loc{background-attachment:scroll}
+  }
+  @media(max-width:560px){
+    .fgrid{grid-template-columns:1fr}
+    .gmason{columns:1}
+    .topbar .nav-cta{display:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar" id="topbar">
+  <div class="brandmark">Albert Einstein 6<small>Herzliya Pituach</small></div>
+  <a href="#enquire" class="nav-cta">Private Viewing</a>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="bg"></div>
+  <div class="hero-inner">
+    <div class="eyebrow">Second Line to the Sea · Herzliya Pituach</div>
+    <h1>A Classic Villa<br>by the Mediterranean</h1>
+    <p class="sub">A rare two-storey villa residence within a gated, pedestrianised seaside enclave</p>
+    <div class="price">
+      <span class="amt">$8,600,000</span>
+      <span class="shk">&#8362;25,542,000</span>
+    </div>
+  </div>
+  <div class="scrollcue"></div>
+</header>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="wrap reveal">
+    <div class="divider"><span></span><i></i><span></span></div>
+    <p>&ldquo;One minute from the pristine sands of the Riviera, a 470 sqm villa apartment where Jerusalem stone, marble and parquet meet the quiet of a private, gated street.&rdquo;</p>
+    <div class="by">Albert Einstein 6 &middot; Herzliya Pituach</div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="wrap">
+    <div class="grid">
+      <div class="stat reveal d1"><div class="num" data-count="470"></div><div class="lbl">Sqm Living</div></div>
+      <div class="stat reveal d1"><div class="num" data-count="300"></div><div class="lbl">Sqm Private Garden</div></div>
+      <div class="stat reveal d2"><div class="num" data-count="6"></div><div class="lbl">En-Suite Bedrooms</div></div>
+      <div class="stat reveal d3"><div class="num" data-count="4"></div><div class="lbl">Covered Parking</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- NARRATIVE -->
+<section class="narr">
+  <div class="wrap">
+    <div class="row">
+      <div class="reveal">
+        <div class="eyebrow">The Residence</div>
+        <h2>Space, Light &amp; Quiet Grandeur</h2>
+        <p>Set over two floors within an architecturally distinctive complex of low-rise buildings, this Smart-House villa apartment is meticulously designed with large, well-proportioned rooms, high ceilings and grand picture windows.</p>
+        <p>Marble floors interlace with rich parquet throughout, while Jerusalem stone pillars bring a timeless sense of place. The open-plan salon flows to a formal dining room and an expansive kitchen overlooking the garden.</p>
+        <p>A secure entrance leads from both the street and the underground garage, with a private elevator serving every level.</p>
+      </div>
+      <div class="imgwrap reveal d2">
+        <img src="assets/photo-07.jpg" alt="Grand open-plan salon with marble floors and garden views" />
+        <span class="tag">The Salon</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="wrap">
+    <div class="divider"><span></span><i></i><span></span></div>
+    <h2 class="reveal">Appointments &amp; Amenities</h2>
+    <div class="fgrid">
+      <div class="feat reveal"><span class="ic">&#9733;</span><h3>Kosher Wolf Kitchen</h3><p>Twin Wolf ovens, Dacor hobs &amp; Sub-Zero suite</p></div>
+      <div class="feat reveal d1"><span class="ic">&#9778;</span><h3>Hidden Passover Kitchen</h3><p>A fully functioning second kitchen, discreetly concealed</p></div>
+      <div class="feat reveal d2"><span class="ic">&#9788;</span><h3>Smart Home</h3><p>Underfloor heating, full climate control &amp; electric blinds</p></div>
+      <div class="feat reveal d3"><span class="ic">&#9826;</span><h3>Private Spa &amp; Pool</h3><p>Residents&rsquo; pool, sauna and professional gym</p></div>
+      <div class="feat reveal"><span class="ic">&#9737;</span><h3>Two Minutes to the Beach</h3><p>Walking distance to the sea, cafes &amp; squares</p></div>
+      <div class="feat reveal d1"><span class="ic">&#9711;</span><h3>24/7 Security</h3><p>Gated community with around-the-clock protection</p></div>
+      <div class="feat reveal d2"><span class="ic">&#9635;</span><h3>Wrap-Around Garden</h3><p>A private garden enveloping the residence</p></div>
+      <div class="feat reveal d3"><span class="ic">&#9651;</span><h3>Garage &amp; Elevator</h3><p>Secured underground parking with lift to every floor</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SHOWCASE -->
+<section class="showcase">
+  <div class="scene">
+    <div class="pic" style="background-image:url('assets/photo-11.jpg')"></div>
+    <div class="txt reveal">
+      <div class="eyebrow">The Sun Room</div>
+      <h3>Bathed in Mediterranean Light</h3>
+      <p>A curved, garden-facing room wrapped in sheer drapery and polished marble &mdash; a serene retreat that fills with morning sun.</p>
+    </div>
+  </div>
+  <div class="scene alt">
+    <div class="pic" style="background-image:url('assets/photo-08.jpg')"></div>
+    <div class="txt reveal">
+      <div class="eyebrow">The Atrium</div>
+      <h3>A Cascading Crystal Centrepiece</h3>
+      <p>A dramatic full-height crystal chandelier descends beside the glass balustrade, framing curated art and the home&rsquo;s elegant double-height proportions.</p>
+    </div>
+  </div>
+  <div class="scene">
+    <div class="pic" style="background-image:url('assets/photo-14.jpg')"></div>
+    <div class="txt reveal">
+      <div class="eyebrow">The Library</div>
+      <h3>Crafted Joinery &amp; Quiet Corners</h3>
+      <p>Floor-to-ceiling bespoke bookcases, classic gilded seating and a sterling-dressed buffet lend the home its enduring, collected character.</p>
+    </div>
+  </div>
+  <div class="scene alt">
+    <div class="pic" style="background-image:url('assets/photo-03.jpg')"></div>
+    <div class="txt reveal">
+      <div class="eyebrow">The Master Suite</div>
+      <h3>Garden Doors &amp; a Private Dressing Room</h3>
+      <p>The principal suite opens directly onto the greenery through full-height sliding doors, and is served by its own generous walk-in dressing room.</p>
+    </div>
+  </div>
+  <div class="scene">
+    <div class="pic" style="background-image:url('assets/photo-02.jpg')"></div>
+    <div class="txt reveal">
+      <div class="eyebrow">The Dressing Room</div>
+      <h3>Tailored Storage, Herringbone Parquet</h3>
+      <p>Mirrored wardrobes and custom cabinetry run wall to wall over a warm herringbone floor &mdash; dressing space worthy of the suite it serves.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="loc">
+  <div class="wrap reveal">
+    <div class="divider"><span></span><i></i><span></span></div>
+    <h2>Life on the Riviera</h2>
+    <p>A pedestrianised, mosaic-paved promenade winds between low-rise residences and Mediterranean gardens &mdash; a gated world steps from the sea, a synagogue and a private medical centre.</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <div class="wrap">
+    <div class="divider"><span></span><i></i><span></span></div>
+    <h2 class="reveal">Gallery</h2>
+    <div class="gmason">
+      <a href="assets/photo-15.jpg" target="_blank"><img src="assets/photo-15.jpg" alt="Mosaic promenade and seaside residences" /></a>
+      <a href="assets/photo-07.jpg" target="_blank"><img src="assets/photo-07.jpg" alt="Open-plan salon" /></a>
+      <a href="assets/photo-08.jpg" target="_blank"><img src="assets/photo-08.jpg" alt="Crystal chandelier atrium" /></a>
+      <a href="assets/photo-11.jpg" target="_blank"><img src="assets/photo-11.jpg" alt="Sun room" /></a>
+      <a href="assets/photo-14.jpg" target="_blank"><img src="assets/photo-14.jpg" alt="Library" /></a>
+      <a href="assets/photo-03.jpg" target="_blank"><img src="assets/photo-03.jpg" alt="Master suite with garden access" /></a>
+      <a href="assets/photo-02.jpg" target="_blank"><img src="assets/photo-02.jpg" alt="Walk-in dressing room" /></a>
+      <a href="assets/photo-13.jpg" target="_blank"><img src="assets/photo-13.jpg" alt="Garden promenade" /></a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="enquire">
+  <div class="wrap reveal">
+    <div class="eyebrow">Private Enquiries</div>
+    <h2>Arrange a Private Viewing</h2>
+    <p class="lead">Discreet representation for an exceptional Herzliya Pituach residence. Viewings by appointment only.</p>
+    <div class="price-big">$8,600,000<small>&#8362;25,542,000</small></div>
+    <div class="btns">
+      <a class="btn btn-wa" href="https://wa.me/972525554201?text=Hello%20Ari%2C%20I%27d%20like%20to%20arrange%20a%20private%20viewing%20of%20the%20villa%20at%20Albert%20Einstein%206%2C%20Herzliya%20Pituach." target="_blank">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="#fff"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.148-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+        WhatsApp Ari
+      </a>
+      <a class="btn btn-line" href="tel:+972525554201">Call &middot; +972 52 555 4201</a>
+    </div>
+    <div class="agent">
+      <div class="nm">Ari Ashkenazi</div>
+      <div class="ro">Davidson Real Estate &middot; Luxury Netanya &amp; Herzliya</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand">Davidson Real Estate</div>
+    <div>Albert Einstein 6 &middot; Herzliya Pituach &middot; Offered at $8,600,000</div>
+    <div class="disc">All dimensions, figures and descriptions are approximate, provided in good faith for guidance only, and subject to verification against the property&rsquo;s registration and survey documents. This page does not constitute an offer or contract.</div>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a class="wa-float" href="https://wa.me/972525554201?text=Hello%20Ari%2C%20I%27m%20interested%20in%20Albert%20Einstein%206%2C%20Herzliya%20Pituach." target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.148-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+</a>
+
+<script>
+  // top bar background on scroll
+  const tb=document.getElementById('topbar');
+  addEventListener('scroll',()=>{tb.classList.toggle('scrolled',scrollY>60)});
+
+  // reveal on scroll
+  const io=new IntersectionObserver((es)=>{
+    es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+  },{threshold:.16});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // count-up for stats
+  const countUp=(el)=>{
+    const target=+el.dataset.count;
+    const dur=1400, t0=performance.now();
+    const tick=(now)=>{
+      const p=Math.min((now-t0)/dur,1);
+      const eased=1-Math.pow(1-p,3);
+      el.textContent=Math.round(target*eased);
+      if(p<1)requestAnimationFrame(tick);
+      else el.textContent=target;
+    };
+    requestAnimationFrame(tick);
+  };
+  const sio=new IntersectionObserver((es)=>{
+    es.forEach(e=>{if(e.isIntersecting){countUp(e.target);sio.unobserve(e.target)}});
+  },{threshold:.6});
+  document.querySelectorAll('.num[data-count]').forEach(el=>sio.observe(el));
+</script>
+</body>
+</html>
